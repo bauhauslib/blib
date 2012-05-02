@@ -1,0 +1,158 @@
+#N canvas 867 7 258 426 10;
+#N canvas 497 0 253 686 comp 1;
+#X obj -1 5 adc~;
+#X obj 0 575 *~;
+#X obj 38 232 sel 0;
+#X msg 38 299 1;
+#X obj -1 612 dac~;
+#X obj 127 419 f;
+#X msg 127 299 bang;
+#X obj 127 363 del;
+#X obj 142 392 r ratio;
+#X obj 142 336 r attack;
+#X obj 53 152 r threshold;
+#N canvas 309 19 450 300 knee 1;
+#X obj 7 12 inlet;
+#X obj 7 279 outlet;
+#X obj 161 12 inlet;
+#X obj 7 185 pack;
+#X obj 28 39 r release;
+#X obj 161 185 pack;
+#X obj 182 39 r attack;
+#X msg 161 212 \$1 \$2;
+#X msg 7 212 \$1 \$2;
+#X obj 28 131 * 0;
+#X obj 28 158 f;
+#X obj 182 131 * 0;
+#X msg 224 94 1;
+#X msg 254 94 0.5;
+#X msg 284 94 0;
+#X obj 182 158 f;
+#X obj 224 69 bng 15 250 50 0 empty soft empty 17 7 0 10 -262144 -1
+-1;
+#X obj 254 69 bng 15 250 50 0 empty middle empty 17 7 0 10 -262144
+-1 -1;
+#X obj 284 69 bng 15 250 50 0 empty hard empty 17 7 0 10 -262144 -1
+-1;
+#X msg 70 94 1;
+#X msg 100 94 0.5;
+#X msg 130 94 0;
+#X obj 70 69 bng 15 250 50 0 empty soft empty 17 7 0 10 -262144 -1
+-1;
+#X obj 100 69 bng 15 250 50 0 empty middle empty 17 7 0 10 -262144
+-1 -1;
+#X obj 130 69 bng 15 250 50 0 empty hard empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 9 0;
+#X connect 5 0 7 0;
+#X connect 6 0 11 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 3 1;
+#X connect 11 0 15 0;
+#X connect 12 0 11 1;
+#X connect 13 0 11 1;
+#X connect 14 0 11 1;
+#X connect 15 0 5 1;
+#X connect 16 0 12 0;
+#X connect 17 0 13 0;
+#X connect 18 0 14 0;
+#X connect 19 0 9 1;
+#X connect 20 0 9 1;
+#X connect 21 0 9 1;
+#X connect 22 0 19 0;
+#X connect 23 0 20 0;
+#X connect 24 0 21 0;
+#X restore 38 476 pd knee;
+#X obj 59 336 r release;
+#X obj 38 503 line~;
+#X obj 74 125 s input;
+#X obj 38 98 - 100;
+#X obj 37 666 s output;
+#X obj 38 71 env~ 32;
+#X obj 37 612 env~ 32;
+#X obj 37 639 - 100;
+#X obj 38 363 pipe;
+#X obj 38 205 change;
+#X obj 38 535 *~;
+#X obj 92 582 print;
+#X floatatom 127 210 5 0 0 0 - - -;
+#X obj 38 178 >;
+#X connect 0 0 1 0;
+#X connect 0 0 17 0;
+#X connect 0 1 17 0;
+#X connect 1 0 4 0;
+#X connect 1 0 4 1;
+#X connect 1 0 18 0;
+#X connect 2 0 3 0;
+#X connect 2 1 6 0;
+#X connect 3 0 20 0;
+#X connect 5 0 11 1;
+#X connect 5 0 23 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 1;
+#X connect 9 0 7 1;
+#X connect 10 0 25 1;
+#X connect 11 0 13 0;
+#X connect 12 0 20 1;
+#X connect 13 0 22 0;
+#X connect 13 0 22 1;
+#X connect 15 0 14 0;
+#X connect 15 0 24 0;
+#X connect 15 0 25 0;
+#X connect 17 0 15 0;
+#X connect 18 0 19 0;
+#X connect 19 0 16 0;
+#X connect 20 0 11 0;
+#X connect 21 0 2 0;
+#X connect 22 0 1 1;
+#X connect 25 0 21 0;
+#X restore 3 248 pd comp;
+#X obj 1 -105 hsl 160 15 1 0.1 0 0 ratio empty empty -2 -8 0 10 -262144
+-1 -1 5700 1;
+#X obj 1 -50 hsl 160 15 0 500 0 0 attack empty empty -2 -8 0 10 -262144
+-1 -1 2600 1;
+#X obj 1 5 hsl 160 15 0 3000 0 0 release empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text -4 24 RELEASE;
+#X text -4 -31 ATTACK;
+#X text -4 -86 RATIO;
+#X floatatom 171 -90 5 0 0 0 - - -;
+#X floatatom 171 -35 5 0 0 0 - - -;
+#X floatatom 171 20 5 0 0 0 - - -;
+#X text 205 -31 ms;
+#X text 205 24 ms;
+#X obj 19 108 vu 15 120 input empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 69 108 vu 15 120 output empty -1 -8 0 10 -66577 -1 1 0;
+#X text 18 233 IN;
+#X text 66 233 OUT;
+#X text 204 -86 in/out;
+#X floatatom 173 70 5 0 0 0 - - -;
+#X obj 136 105 cnv 15 100 160 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 156 127 bng 25 250 50 0 hard empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 156 172 bng 25 250 50 0 middle empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 156 217 bng 25 250 50 0 soft empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 189 131 HARD;
+#X text 189 175 MIDDLE;
+#X text 189 221 SOFT;
+#X obj 156 110 loadbang;
+#X text 154 246 BEHAVIOR;
+#X obj 1 55 hsl 160 15 -100 12 0 0 threshold empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X text -4 73 THRESHOLD;
+#X text 207 74 db;
+#X connect 1 0 7 0;
+#X connect 2 0 8 0;
+#X connect 3 0 9 0;
+#X connect 25 0 19 0;
+#X connect 27 0 17 0;
+#X coords 0 -1 1 1 85 60 2 100 100;
