@@ -1,0 +1,31 @@
+#N canvas -803 48 686 602 10;
+#X obj 24 74 adc~;
+#X obj 256 76 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 295 79 push once - REC LOOP push twice - STOP REC \, PLAY LOOP
+;
+#X obj 77 77 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 119 82 STOP and PLAY BUTTON;
+#X obj 26 436 hip~ 5;
+#X obj 26 475 dac~;
+#X obj 26 411 *~;
+#X obj 112 387 line~;
+#X obj 112 341 dbtorms;
+#X obj 112 364 pack 0 50;
+#X obj 115 309 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 20 21 LOOPER;
+#X obj 25 132 bl_looper;
+#X connect 0 0 13 0;
+#X connect 0 1 13 0;
+#X connect 1 0 13 2;
+#X connect 3 0 13 1;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 7 0 5 0;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 13 0 7 0;
