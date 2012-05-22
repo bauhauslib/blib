@@ -1,4 +1,4 @@
-#N canvas -661 250 492 382 10;
+#N canvas 478 332 492 382 10;
 #X obj 39 324 dac~;
 #X obj 38 69 noise~;
 #X obj 121 48 hsl 128 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
@@ -15,7 +15,7 @@
 #X msg 257 172 offset \$1;
 #X obj 228 228 loadbang;
 #X msg 228 251 speed 3 \, depth 400 \, offset 30;
-#X obj 39 274 bl_wahwah;
+#X obj 39 274 wahwah~;
 #X connect 1 0 13 0;
 #X connect 2 0 3 0;
 #X connect 2 0 8 0;
