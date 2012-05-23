@@ -1,4 +1,4 @@
-#N canvas -803 48 686 602 10;
+#N canvas 426 108 634 516 10;
 #X obj 24 74 adc~;
 #X obj 256 76 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -10,13 +10,13 @@
 #X obj 26 436 hip~ 5;
 #X obj 26 475 dac~;
 #X obj 26 411 *~;
-#X obj 112 387 line~;
-#X obj 112 341 dbtorms;
-#X obj 112 364 pack 0 50;
-#X obj 115 309 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 67 379 line~;
+#X obj 67 333 dbtorms;
+#X obj 67 356 pack 0 50;
+#X obj 70 301 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X text 20 21 LOOPER;
-#X obj 25 132 bl_looper;
+#X obj 25 132 looper~;
 #X connect 0 0 13 0;
 #X connect 0 1 13 0;
 #X connect 1 0 13 2;
