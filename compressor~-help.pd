@@ -1,10 +1,10 @@
 #N canvas 753 163 617 758 10;
 #X obj 260 -78 hsl 160 15 1 0.1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 11000 1;
 #X obj 260 -23 hsl 160 15 0 500 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6800 1;
 #X obj 260 32 hsl 160 15 0 3000 0 0 release empty empty -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 6000 1;
 #X text 256 48 RELEASE;
 #X text 256 -7 ATTACK;
 #X text 256 -62 RATIO;
@@ -15,43 +15,29 @@
 #X text 464 51 ms;
 #X text 463 -59 in/out;
 #X floatatom 432 97 5 0 0 0 - - -;
-#X obj 407 201 cnv 15 100 160 empty empty empty 20 12 0 14 -233017
--66577 0;
-#X obj 427 223 bng 25 250 50 0 hard empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 427 268 bng 25 250 50 0 middle empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 427 313 bng 25 250 50 0 soft empty empty 17 7 0 10 -262144 -1
--1;
-#X text 460 227 HARD;
-#X text 460 271 MIDDLE;
-#X text 460 317 SOFT;
-#X obj 427 206 loadbang;
-#X text 425 342 BEHAVIOR;
 #X obj 260 82 hsl 160 15 -100 12 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 8700 1;
 #X text 255 100 THRESHOLD;
 #X text 466 101 db;
 #X obj 50 404 compressor~;
 #X obj 51 336 adc~;
-#X obj 51 463 dac~;
+#X obj 51 468 dac~;
 #X msg 206 155 threshold \$1;
 #X msg 159 88 release \$1;
 #X msg 147 19 attack \$1;
 #X msg 123 -32 ratio \$1;
 #X connect 0 0 6 0;
-#X connect 0 0 31 0;
+#X connect 0 0 22 0;
 #X connect 1 0 7 0;
-#X connect 1 0 30 0;
+#X connect 1 0 21 0;
 #X connect 2 0 8 0;
-#X connect 2 0 29 0;
-#X connect 20 0 14 0;
-#X connect 22 0 12 0;
-#X connect 22 0 28 0;
-#X connect 25 0 27 0;
-#X connect 26 0 25 0;
-#X connect 28 0 25 1;
-#X connect 29 0 25 1;
-#X connect 30 0 25 1;
-#X connect 31 0 25 1;
+#X connect 2 0 20 0;
+#X connect 13 0 12 0;
+#X connect 13 0 19 0;
+#X connect 16 0 18 0;
+#X connect 17 0 16 0;
+#X connect 19 0 16 1;
+#X connect 20 0 16 1;
+#X connect 21 0 16 1;
+#X connect 22 0 16 1;
 #X coords 0 758 1 757 85 60 0;
