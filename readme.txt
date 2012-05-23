@@ -1,6 +1,7 @@
-Except as otherwise noted, all files in the "Bauhaus Library" or short "bauhauslib" or even shorter "blib" library of abstractions are
-copyright of the Bauhaus-Universität Weimar and can be distributed freely according to the
-terms of the GNU GENERAL PUBLIC LICENSE v3 found below.
+Except as otherwise noted, all files in the "Bauhaus Library" or short
+"bauhauslib" or even shorter "blib" library of abstractions are
+copyright of the Bauhaus-Universität Weimar and can be distributed freely
+according to the terms of the GNU GENERAL PUBLIC LICENSE v3 found below.
 
 Where files have been imported from outside sources, comments inside the file
 describe the authors and the license to apply to these abstractions.
