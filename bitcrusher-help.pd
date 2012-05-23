@@ -1,0 +1,43 @@
+#N canvas 703 101 640 709 10;
+#X obj 207 21 osc~ 350;
+#X floatatom 207 -10 5 0 0 0 - - -;
+#X obj 222 136 vsl 15 128 0 100 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 222 282 / 100;
+#X obj 207 355 dac~;
+#X obj 207 310 *~;
+#X floatatom 264 63 5 0 0 0 - - -;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array bits 200 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 199 -1 200 140 1;
+#X restore 30 407 graph;
+#X obj 87 350 metro 100;
+#X obj 87 381 tabwrite~ bits;
+#X obj 87 329 loadbang;
+#X text 30 -114 BITCRUSHER;
+#X text 61 69 INLET 1 - Audio Input;
+#X text 285 88 INLET 2 - Resolution of the bitcrusher;
+#X text 29 -90 A Bitcrusher is a digital audio effect \, which produces
+a distortion by the reduction of the resolution or bandwidth of digital
+audio data. (Wikipedia);
+#X text 61 110 OUTLET - Audio Output;
+#X text 248 190 VOLUME;
+#X obj 207 94 bitcrusher;
+#X text 247 -10 change osc-frequency;
+#X connect 0 0 17 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 1;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
+#X connect 5 0 9 0;
+#X connect 6 0 17 1;
+#X connect 8 0 9 0;
+#X connect 10 0 8 0;
+#X connect 17 0 5 0;
