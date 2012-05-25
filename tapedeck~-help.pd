@@ -1,0 +1,16 @@
+#N canvas 87 407 677 498 10;
+#X obj 78 178 tapedeck~;
+#X msg 78 89 open \$1;
+#X obj 78 66 openpanel;
+#X obj 78 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 232 dac~;
+#X msg 100 114 stop;
+#X msg 124 140 play;
+#X connect 0 0 4 0;
+#X connect 0 0 4 1;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
