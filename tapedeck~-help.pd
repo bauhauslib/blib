@@ -1,12 +1,22 @@
-#N canvas 87 407 677 498 10;
-#X obj 78 178 tapedeck~;
+#N canvas 562 71 677 498 10;
+#X obj 78 322 tapedeck~;
 #X msg 78 89 open \$1;
 #X obj 78 66 openpanel;
 #X obj 78 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 78 232 dac~;
-#X msg 100 114 stop;
-#X msg 124 140 play;
+#X obj 78 376 dac~;
+#X msg 94 117 stop;
+#X msg 118 143 play;
+#X text 211 94 to implement later: pause rewind and fast forward;
+#X msg 321 172 pause;
+#X msg 329 203 ff;
+#X msg 336 229 rw;
+#X msg 130 236 side \$1;
+#X msg 130 203 A;
+#X msg 165 204 B;
+#X msg 136 290 autoreverse $;
+#X obj 136 271 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 4 0;
 #X connect 0 0 4 1;
 #X connect 1 0 0 0;
@@ -14,3 +24,6 @@
 #X connect 3 0 2 0;
 #X connect 5 0 0 0;
 #X connect 6 0 0 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 15 0 14 0;
