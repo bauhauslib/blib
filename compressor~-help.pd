@@ -1,33 +1,33 @@
 #N canvas 839 160 523 478 10;
-#X declare blib;
-#X obj 228 -372 hsl 160 15 1 0.1 0 0 empty empty empty -2 -8 0 10 -262144
+#X declare -path blib;
+#X obj 236 -337 hsl 160 15 1 0.1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 228 -317 hsl 160 15 0 500 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 236 -282 hsl 160 15 0 500 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 228 -262 hsl 160 15 0 3000 0 0 release empty empty -2 -8 0 10
+#X obj 236 -227 hsl 160 15 0 3000 0 0 release empty empty -2 -8 0 10
 -262144 -1 -1 0 1;
-#X text 224 -246 RELEASE;
-#X text 224 -301 ATTACK;
-#X text 224 -356 RATIO;
-#X floatatom 398 -357 5 0 0 0 - - -;
-#X floatatom 398 -302 5 0 0 0 - - -;
-#X floatatom 398 -247 5 0 0 0 - - -;
-#X text 432 -298 ms;
-#X text 432 -243 ms;
-#X text 431 -353 in/out;
-#X floatatom 400 -197 5 0 0 0 - - -;
-#X obj 228 -212 hsl 160 15 -100 12 0 0 empty empty empty -2 -8 0 10
+#X text 232 -211 RELEASE;
+#X text 232 -266 ATTACK;
+#X text 232 -321 RATIO;
+#X floatatom 406 -322 5 0 0 0 - - -;
+#X floatatom 406 -267 5 0 0 0 - - -;
+#X floatatom 406 -212 5 0 0 0 - - -;
+#X text 440 -263 ms;
+#X text 440 -208 ms;
+#X text 439 -318 in/out;
+#X floatatom 408 -162 5 0 0 0 - - -;
+#X obj 236 -177 hsl 160 15 -100 12 0 0 empty empty empty -2 -8 0 10
 -262144 -1 -1 0 1;
-#X text 223 -194 THRESHOLD;
-#X text 434 -193 db;
-#X obj 33 -14 dac~;
-#X msg 174 -139 threshold \$1;
-#X msg 127 -206 release \$1;
-#X msg 115 -275 attack \$1;
-#X msg 91 -326 ratio \$1;
-#X obj 37 -150 noise~;
-#X obj 36 -82 blib/compressor~;
-#X obj 4 -365 declare blib;
+#X text 231 -159 THRESHOLD;
+#X text 442 -158 db;
+#X obj 3 -15 dac~;
+#X msg 182 -104 threshold \$1;
+#X msg 135 -171 release \$1;
+#X msg 123 -240 attack \$1;
+#X msg 99 -289 ratio \$1;
+#X obj 7 -151 noise~;
+#X obj 6 -83 blib/compressor~;
+#X obj -6 -388 declare -path blib;
 #X connect 0 0 6 0;
 #X connect 0 0 20 0;
 #X connect 1 0 7 0;
