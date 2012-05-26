@@ -1,31 +1,47 @@
-#N canvas 426 108 634 516 10;
-#X obj 24 74 adc~;
-#X obj 256 76 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 295 79 push once - REC LOOP push twice - STOP REC \, PLAY LOOP
-;
-#X obj 77 77 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 119 82 STOP and PLAY BUTTON;
-#X obj 26 436 hip~ 5;
+#N canvas 241 299 701 597 10;
 #X obj 26 475 dac~;
 #X obj 26 411 *~;
 #X obj 67 379 line~;
-#X obj 67 333 dbtorms;
-#X obj 67 356 pack 0 50;
-#X obj 70 301 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 70 327 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6400 1;
 #X text 20 21 LOOPER;
-#X obj 25 132 looper~;
-#X connect 0 0 13 0;
-#X connect 0 1 13 0;
-#X connect 1 0 13 2;
-#X connect 3 0 13 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 5 0;
-#X connect 8 0 7 1;
-#X connect 9 0 10 0;
-#X connect 10 0 8 0;
-#X connect 11 0 9 0;
-#X connect 13 0 7 0;
+#X obj 27 247 looper~;
+#X msg 67 351 \$1 20;
+#X obj 120 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 131 154 clear;
+#X msg 141 178 play;
+#X msg 153 204 record;
+#X text 142 129 short= record \, long= clear;
+#X obj 66 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 87 282 bang on loop;
+#X msg 227 210 phrase \$1;
+#X obj 227 189 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 221 406 http://www.ehow.com/how_6808682_use-boss-rc_2-loop-station.html
+;
+#X obj 27 121 tapedeck~;
+#X obj 28 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 27 76 openpanel;
+#X msg 27 97 open \$1;
+#X msg 103 90 play;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 1;
+#X connect 3 0 6 0;
+#X connect 5 0 1 0;
+#X connect 5 1 12 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 1;
+#X connect 8 0 5 1;
+#X connect 9 0 5 1;
+#X connect 10 0 5 1;
+#X connect 14 0 5 1;
+#X connect 15 0 14 0;
+#X connect 17 0 5 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
+#X connect 21 0 17 0;
