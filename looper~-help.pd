@@ -1,9 +1,9 @@
-#N canvas 100 253 701 597 10;
+#N canvas 507 247 701 597 10;
 #X obj 27 475 dac~;
 #X obj 27 411 *~;
 #X obj 67 379 line~;
 #X obj 70 327 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4500 1;
+-1 -1 5700 1;
 #X text 20 21 LOOPER;
 #X obj 27 247 looper~;
 #X msg 67 351 \$1 20;
