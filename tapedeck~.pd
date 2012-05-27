@@ -1,4 +1,4 @@
-#N canvas 735 225 846 621 10;
+#N canvas 818 166 846 621 10;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-side-A 148949 float 2;
 #X coords 0 1 148949 -1 200 140 1 0 0;
@@ -35,7 +35,7 @@
 #X obj 47 335 tabread4~ \$0-side-A;
 #X msg 158 310 set \$1;
 #X text 655 325 todo: side B;
-#N canvas 248 652 450 300 flutter 0;
+#N canvas 248 652 450 300 flutter 1;
 #X obj 38 211 vd~ \$0-flutter;
 #X obj 38 75 delwrite~ \$0-flutter 500;
 #X obj 38 43 inlet~;
@@ -49,8 +49,8 @@
 #X obj 260 83 clip 0 1;
 #X obj 205 59 route speed depth;
 #X obj 205 83 clip 0 1;
-#X obj 205 105 * 10;
-#X obj 260 102 * 10;
+#X obj 260 102 * 6;
+#X obj 205 105 * 6;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 4 0 9 1;
@@ -60,12 +60,12 @@
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 0 0;
-#X connect 10 0 14 0;
+#X connect 10 0 13 0;
 #X connect 11 0 12 0;
 #X connect 11 1 10 0;
-#X connect 12 0 13 0;
-#X connect 13 0 7 0;
-#X connect 14 0 6 0;
+#X connect 12 0 14 0;
+#X connect 13 0 6 0;
+#X connect 14 0 7 0;
 #X restore 47 376 pd flutter;
 #N canvas 401 416 450 300 type 0;
 #X obj 24 25 inlet~;
@@ -107,7 +107,7 @@
 #X obj 46 103 route play stop pause ff rw;
 #X obj 205 216 route open side autoreverse;
 #X obj 185 352 route flutter type noise;
-#N canvas 0 22 721 625 loading 1;
+#N canvas 0 22 721 625 loading 0;
 #X obj 22 20 inlet;
 #X obj 22 217 soundfiler;
 #X obj 22 241 t f f;

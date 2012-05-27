@@ -1,9 +1,9 @@
-#N canvas 212 353 701 597 10;
+#N canvas 619 218 701 597 10;
 #X obj 27 475 dac~;
 #X obj 27 411 *~;
 #X obj 67 379 line~;
 #X obj 70 327 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5700 1;
+-1 -1 0 1;
 #X text 20 21 LOOPER;
 #X obj 27 247 looper~;
 #X msg 67 351 \$1 20;
@@ -30,12 +30,14 @@
 #X obj 173 21 notein 1;
 #X obj 218 48 moses 1;
 #X msg 260 73 1;
+#X obj 175 282 print looper;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 1;
 #X connect 3 0 6 0;
 #X connect 5 0 1 0;
 #X connect 5 1 11 0;
+#X connect 5 1 25 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;
