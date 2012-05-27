@@ -1,9 +1,9 @@
-#N canvas 400 344 701 597 10;
+#N canvas 425 348 701 597 10;
 #X obj 27 475 dac~;
 #X obj 27 441 *~;
 #X obj 67 409 line~;
 #X obj 70 357 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7500 1;
+-1 -1 0 1;
 #X text 137 21 LOOPER;
 #X obj 27 277 looper~;
 #X msg 67 381 \$1 20;
@@ -24,7 +24,7 @@
 #X msg 27 67 open \$1;
 #X msg 90 68 play;
 #X obj 27 91 tapedeck~;
-#N canvas 66 497 450 300 MIDI 1;
+#N canvas 66 497 450 300 MIDI 0;
 #X obj 130 167 outlet;
 #X obj 130 63 notein 1;
 #X obj 175 90 moses 1;
