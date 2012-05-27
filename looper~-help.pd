@@ -3,7 +3,7 @@
 #X obj 27 411 *~;
 #X obj 67 379 line~;
 #X obj 70 327 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7200 1;
+-1 -1 0 1;
 #X text 137 21 LOOPER;
 #X obj 27 247 looper~;
 #X msg 67 351 \$1 20;
@@ -17,10 +17,8 @@
 #X text 87 282 bang on loop;
 #X msg 343 211 phrase \$1;
 #X obj 343 190 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
-#X text 221 406 http://www.ehow.com/how_6808682_use-boss-rc_2-loop-station.html
-;
-#X obj 28 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1 -1 0;
+#X obj 27 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 27 46 openpanel;
 #X msg 27 67 open \$1;
@@ -38,13 +36,15 @@
 #X connect 2 1 3 0;
 #X connect 3 0 0 0;
 #X restore 120 110 pd MIDI;
+#X obj 178 440 pddp/pddplink http://www.ehow.com/how_6808682_use-boss-rc_2-loop-station.html
+;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 1;
 #X connect 3 0 6 0;
 #X connect 5 0 1 0;
 #X connect 5 1 11 0;
-#X connect 5 1 21 0;
+#X connect 5 1 20 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;
@@ -52,9 +52,9 @@
 #X connect 10 0 5 1;
 #X connect 13 0 5 1;
 #X connect 14 0 13 0;
+#X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 18 0;
-#X connect 18 0 22 0;
-#X connect 19 0 22 0;
-#X connect 22 0 5 0;
-#X connect 23 0 7 0;
+#X connect 17 0 21 0;
+#X connect 18 0 21 0;
+#X connect 21 0 5 0;
+#X connect 22 0 7 0;
