@@ -1,4 +1,4 @@
-#N canvas 534 142 701 597 10;
+#N canvas 334 285 701 597 10;
 #X obj 27 475 dac~;
 #X obj 27 441 *~;
 #X obj 67 409 line~;
@@ -15,17 +15,16 @@
 #X obj 66 312 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 87 312 bang on loop;
-#X msg 345 233 phrase \$1;
-#X obj 345 212 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+#X msg 230 244 phrase \$1;
+#X obj 230 223 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 27 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 27 46 openpanel;
 #X msg 27 67 open \$1;
 #X msg 90 68 play;
-#X obj 175 312 print looper;
 #X obj 27 91 tapedeck~;
-#N canvas 0 22 450 300 MIDI 0;
+#N canvas 66 497 450 300 MIDI 1;
 #X obj 130 167 outlet;
 #X obj 130 63 notein 1;
 #X obj 175 90 moses 1;
@@ -46,7 +45,6 @@
 #X connect 3 0 6 0;
 #X connect 5 0 1 0;
 #X connect 5 1 11 0;
-#X connect 5 1 19 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;
@@ -56,8 +54,8 @@
 #X connect 14 0 13 0;
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 20 0;
-#X connect 18 0 20 0;
-#X connect 20 0 5 0;
-#X connect 21 0 7 0;
-#X connect 23 0 5 1;
+#X connect 17 0 19 0;
+#X connect 18 0 19 0;
+#X connect 19 0 5 0;
+#X connect 20 0 7 0;
+#X connect 22 0 5 1;
