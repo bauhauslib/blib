@@ -1,4 +1,4 @@
-#N canvas 507 247 701 597 10;
+#N canvas 212 353 701 597 10;
 #X obj 27 475 dac~;
 #X obj 27 411 *~;
 #X obj 67 379 line~;
@@ -27,6 +27,9 @@
 #X msg 27 97 open \$1;
 #X msg 103 90 play;
 #X text 142 129 long= clear \, short= toggle record/play;
+#X obj 173 21 notein 1;
+#X obj 218 48 moses 1;
+#X msg 260 73 1;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 1;
@@ -44,3 +47,7 @@
 #X connect 18 0 19 0;
 #X connect 19 0 16 0;
 #X connect 20 0 16 0;
+#X connect 22 1 23 0;
+#X connect 23 0 7 0;
+#X connect 23 1 24 0;
+#X connect 24 0 7 0;
