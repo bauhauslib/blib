@@ -1,30 +1,29 @@
-#N canvas 318 240 701 597 10;
+#N canvas 534 142 701 597 10;
 #X obj 27 475 dac~;
-#X obj 27 411 *~;
-#X obj 67 379 line~;
-#X obj 70 327 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 27 441 *~;
+#X obj 67 409 line~;
+#X obj 70 357 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7500 1;
 #X text 137 21 LOOPER;
-#X obj 27 247 looper~;
-#X msg 67 351 \$1 20;
+#X obj 27 277 looper~;
+#X msg 67 381 \$1 20;
 #X obj 120 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 131 154 clear;
 #X msg 141 178 play;
 #X msg 153 204 record;
-#X obj 66 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 66 312 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 87 282 bang on loop;
-#X msg 343 211 phrase \$1;
-#X obj 343 190 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+#X text 87 312 bang on loop;
+#X msg 345 233 phrase \$1;
+#X obj 345 212 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 27 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 27 46 openpanel;
 #X msg 27 67 open \$1;
 #X msg 90 68 play;
-#X text 142 129 long= clear \, short= toggle record/play;
-#X obj 175 282 print looper;
+#X obj 175 312 print looper;
 #X obj 27 91 tapedeck~;
 #N canvas 0 22 450 300 MIDI 0;
 #X obj 130 167 outlet;
@@ -38,13 +37,16 @@
 #X restore 120 110 pd MIDI;
 #X obj 178 440 pddp/pddplink http://www.ehow.com/how_6808682_use-boss-rc_2-loop-station.html
 ;
+#X msg 167 227 stop;
+#X text 142 129 long= clear \, short (< 500ms)= toggle record/play
+\, twice=stop;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 1;
 #X connect 3 0 6 0;
 #X connect 5 0 1 0;
 #X connect 5 1 11 0;
-#X connect 5 1 20 0;
+#X connect 5 1 19 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;
@@ -54,7 +56,8 @@
 #X connect 14 0 13 0;
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 21 0;
-#X connect 18 0 21 0;
-#X connect 21 0 5 0;
-#X connect 22 0 7 0;
+#X connect 17 0 20 0;
+#X connect 18 0 20 0;
+#X connect 20 0 5 0;
+#X connect 21 0 7 0;
+#X connect 23 0 5 1;
