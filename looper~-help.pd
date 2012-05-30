@@ -1,9 +1,9 @@
-#N canvas 91 381 701 597 10;
+#N canvas 93 351 701 597 10;
 #X obj 27 507 dac~;
 #X obj 27 473 *~;
 #X obj 42 451 line~;
 #X obj 45 411 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 8600 1;
+-1 -1 0 1;
 #X text 137 21 LOOPER;
 #X obj 27 346 looper~;
 #X msg 42 430 \$1 20;
@@ -40,9 +40,9 @@
 #X text 142 129 long= clear \, short (< 500ms)= toggle record/play
 \, twice=stop;
 #X obj 173 381 print;
-#X msg 265 59 noise \$1;
-#X obj 268 37 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2100 1;
+#X msg 234 69 noise \$1;
+#X obj 237 47 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X msg 177 305 level \$1;
 #X obj 180 288 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
