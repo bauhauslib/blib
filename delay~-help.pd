@@ -1,0 +1,82 @@
+#N canvas 0 22 588 840 10;
+#X obj 20 795 cnv 15 552 21 empty \$0-pddp.cnv.footer empty 20 12 0
+14 -228856 -66577 0;
+#X obj 20 20 cnv 15 552 40 empty \$0-pddp.cnv.header delay~ 3 12 0
+18 -191407 -1 0;
+#X obj 20 588 cnv 3 550 3 empty \$0-pddp.cnv.inlets inlets 8 12 0 13
+-228856 -1 0;
+#N canvas 120 533 255 256 META 0;
+#X text 12 145 OUTLET_0 signal;
+#X text 12 25 LICENSE;
+#X text 12 165 LIBRARY blib;
+#X text 12 185 AUTHOR ives;
+#X text 12 205 RELEASE_DATE 2012;
+#X text 12 5 KEYWORDS audio delay;
+#X text 12 45 DESCRIPTION audio-delay-unit;
+#X text 12 65 INLET_0 signal;
+#X text 12 85 INLET_1 delay time (ms);
+#X text 12 105 INLET_2 feedback gain (0 - 1);
+#X text 12 125 INLET_3 dry/wet mix (0 - 1);
+#X restore 510 797 pd META;
+#X obj 20 686 cnv 3 550 3 empty \$0-pddp.cnv.outlets outlets 8 12 0
+13 -228856 -1 0;
+#X obj 98 597 cnv 17 3 35 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X obj 98 695 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X text 118 694 signal;
+#X obj 512 71 pddp/dsp;
+#X text 187 694 - the outgoing signal.;
+#X obj 20 128 cnv 3 550 3 empty \$0-pddp.cnv.inlets empty 8 12 0 13
+-228856 -1 0;
+#X text 31 43 audio-delay-unit;
+#X obj 83 450 cnv 15 134 40 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X floatatom 127 358 5 0 3000 0 - - -;
+#X floatatom 166 388 5 0 0.99 0 - - -;
+#X obj 298 330 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 318 386 mix;
+#X obj 89 164 noise~;
+#X obj 89 254 *~;
+#X msg 189 212 1 \, 0 20;
+#X obj 189 238 line~;
+#X obj 89 541 dac~;
+#X obj 189 164 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 223 170 bang here to test it;
+#X text 202 387 feedback gain;
+#X text 164 357 delay time;
+#X text 295 309 wet;
+#X text 296 460 dry;
+#X text 96 280 signal~;
+#X text 118 596 signal;
+#X text 188 596 - audio-signal;
+#X obj 98 617 cnv 17 3 35 empty \$0-pddp.cnv.let.0 1 5 9 0 16 -228856
+-162280 0;
+#X text 118 616 float;
+#X text 188 616 - delay time in ms (max 10000);
+#X obj 98 637 cnv 17 3 35 empty \$0-pddp.cnv.let.0 2 5 9 0 16 -228856
+-162280 0;
+#X text 118 636 float;
+#X text 188 636 - feedback gain (0 - 1);
+#X obj 98 657 cnv 17 3 35 empty \$0-pddp.cnv.let.0 r 5 9 0 16 -228856
+-162280 0;
+#X text 118 656 float;
+#X text 42 80 The [b_delay~]-object is a delay-unit for audio-signals
+with variable delay-time \, feedback and dry/wet mix.;
+#X text 188 656 - dry/wet mix (0 - 1);
+#X obj 20 726 cnv 3 550 3 empty \$0-pddp.cnv.outlets arguments 8 12
+0 13 -228856 -1 0;
+#X text 102 744 3 arguments can be assigned. see: inlets;
+#X obj 88 461 delay~ 700 0.3 0.5;
+#X connect 13 0 43 1;
+#X connect 14 0 43 2;
+#X connect 15 0 43 3;
+#X connect 17 0 18 0;
+#X connect 18 0 43 0;
+#X connect 19 0 20 0;
+#X connect 20 0 18 1;
+#X connect 22 0 19 0;
+#X connect 43 0 21 0;
+#X connect 43 0 21 1;
