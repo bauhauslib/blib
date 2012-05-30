@@ -1,9 +1,0 @@
-#N canvas 683 110 945 809 10;
-#X obj 120 -67 inlet~;
-#X obj 129 230 outlet~;
-#X obj 304 55 mtof;
-#X obj 128 154 tabread4~ \$0-array;
-#X obj 286 192 table \$0-array;
-#X obj 304 28 inlet;
-#X connect 3 0 1 0;
-#X connect 5 0 2 0;

@@ -1,7 +1,7 @@
-#N canvas 586 225 480 392 10;
+#N canvas -951 286 480 392 10;
 #X declare -lib iemlib;
 #X obj 368 252 table \$0-source;
-#N canvas 368 467 358 467 load 0;
+#N canvas -715 237 358 467 load 1;
 #X obj 20 75 openpanel;
 #X msg 20 114 read \$1;
 #X obj 20 150 soundfile_info;
@@ -13,8 +13,8 @@
 #X obj 20 425 s \$0-samplerate;
 #X obj 20 16 inlet bang;
 #X obj 110 16 inlet open;
-#X obj 110 48 prepend symbol;
 #X obj 220 16 declare -lib iemlib;
+#X obj 110 48 list prepend symbol;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -25,8 +25,8 @@
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 9 0 0 0;
-#X connect 10 0 11 0;
-#X connect 11 0 1 0;
+#X connect 10 0 12 0;
+#X connect 12 0 1 0;
 #X coords 0 0 1 1 46 70 0;
 #X restore 264 42 pd load;
 #N canvas 351 169 209 374 read_original 0;
@@ -89,7 +89,7 @@
 #X connect 18 0 3 0;
 #X connect 18 0 16 0;
 #X restore 397 232 pd hanning;
-#N canvas 232 194 309 452 read_free 0;
+#N canvas -757 260 309 452 read_free 1;
 #X obj 23 82 samphold~;
 #X obj 7 204 +~;
 #X obj 7 244 tabread4~ \$0-source;
@@ -114,7 +114,7 @@
 #X connect 10 0 6 0;
 #X connect 10 0 1 0;
 #X restore 23 165 pd read_free;
-#N canvas 232 194 313 437 read_free 0;
+#N canvas -670 273 313 437 read_free 1;
 #X obj 23 83 samphold~;
 #X obj 9 204 +~;
 #X obj 9 244 tabread4~ \$0-source;
