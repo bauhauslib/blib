@@ -1,0 +1,13 @@
+#N canvas 560 177 679 714 10;
+#X obj -361 304 reversinator~;
+#X obj -366 26 adc~;
+#X obj -361 593 dac~;
+#X obj -361 533 *~;
+#X obj -256 518 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 1;
