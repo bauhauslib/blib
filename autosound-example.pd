@@ -1,0 +1,9 @@
+#N canvas -949 328 654 338 10;
+#X msg 316 80 l;
+#X obj 22 164 adc~;
+#X obj 21 285 dac~;
+#X obj 23 216 autosound~;
+#X connect 1 0 3 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
