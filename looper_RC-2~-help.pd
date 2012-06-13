@@ -1,8 +1,20 @@
+<<<<<<< HEAD:looper_RC-2~-help.pd
 #N canvas -865 164 701 597 10;
+=======
+<<<<<<< HEAD
+#N canvas 93 351 701 597 10;
+>>>>>>> change:looper~-help.pd
 #X obj 27 507 dac~;
 #X obj 27 473 *~;
 #X obj 42 451 line~;
 #X obj 45 411 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+=======
+#N canvas 495 103 701 597 10;
+#X obj 27 475 dac~;
+#X obj 27 441 *~;
+#X obj 67 409 line~;
+#X obj 70 357 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+>>>>>>> change
 -1 -1 0 1;
 #X text 137 21 LOOPER;
 #X msg 42 430 \$1 20;
@@ -13,9 +25,15 @@
 #X msg 142 177 record;
 #X obj 66 381 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+<<<<<<< HEAD
 #X text 87 381 bang on loop;
 #X msg 177 268 phrase \$1;
 #X obj 177 247 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+=======
+#X text 87 312 bang on loop;
+#X msg 230 244 phrase \$1;
+#X obj 230 223 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+>>>>>>> change
 -1 -1 0;
 #X obj 27 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -38,6 +56,7 @@
 #X msg 167 224 stop;
 #X text 142 129 long= clear \, short (< 500ms)= toggle record/play
 \, twice=stop;
+<<<<<<< HEAD
 #X obj 173 381 print;
 #X msg 234 69 noise \$1;
 #X obj 237 47 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
@@ -45,7 +64,17 @@
 #X msg 177 305 level \$1;
 #X obj 180 288 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
+<<<<<<< HEAD:looper_RC-2~-help.pd
 #X obj 27 346 looper_RC-2~;
+=======
+=======
+#X obj 173 312 print;
+#X msg 265 59 noise \$1;
+#X obj 268 37 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 126 87 stop;
+>>>>>>> change
+>>>>>>> change:looper~-help.pd
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 1;
@@ -59,6 +88,7 @@
 #X connect 13 0 12 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
+<<<<<<< HEAD:looper_RC-2~-help.pd
 #X connect 16 0 18 0;
 #X connect 17 0 18 0;
 #X connect 18 0 28 0;
@@ -71,3 +101,19 @@
 #X connect 28 0 1 0;
 #X connect 28 1 10 0;
 #X connect 28 1 23 0;
+=======
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 19 0;
+#X connect 19 0 5 0;
+#X connect 20 0 7 0;
+#X connect 22 0 5 1;
+#X connect 25 0 19 0;
+#X connect 26 0 25 0;
+<<<<<<< HEAD
+#X connect 27 0 5 1;
+#X connect 28 0 27 0;
+=======
+#X connect 27 0 19 0;
+>>>>>>> change
+>>>>>>> change:looper~-help.pd
