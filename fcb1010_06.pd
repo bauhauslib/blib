@@ -1,16 +1,10 @@
-#N canvas 641 707 236 108 10;
+#N canvas -897 597 236 108 10;
 #X declare -lib iemlib;
 #X obj 193 76 bng 17 250 50 0 reset hider empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 14 68 1202 515 loops 1;
+#N canvas -1015 44 1202 515 loops 1;
 #X obj 50 150 loop 1;
 #X obj 92 150 loop 2;
-#X obj 135 150 loop 3;
-#X obj 180 150 loop 4;
-#X obj 225 150 loop 5;
-#X obj 270 150 loop 6;
-#X obj 55 46 tgl 20 0 metronome hider METRONOME 24 10 0 10 -262144
--1 -1 1 1;
 #X restore 10 56 pd loops;
 #N canvas 914 392 221 439 controller-input 0;
 #X obj 22 20 notein;
@@ -335,20 +329,15 @@
 #X connect 14 0 12 0;
 #X connect 16 0 3 0;
 #X restore 140 76 pd reset;
-#N canvas 823 498 283 170 audio-in/out 0;
+#N canvas -649 528 283 170 audio-in/out 1;
 #X obj 150 19 catch~ output-signal;
 #X obj 150 139 dac~;
 #X obj 20 19 adc~;
 #X obj 20 139 s~ input-signal;
-#X obj 81 69 *~ 1.3;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 3 0;
-#X connect 2 0 4 0;
 #X connect 2 1 3 0;
-#X connect 2 1 4 0;
-#X connect 4 0 1 0;
-#X connect 4 0 1 1;
 #X restore 10 76 pd audio-in/out;
 #N canvas 463 254 322 615 grid 0;
 #X obj 189 73 swap 60000;
@@ -449,7 +438,7 @@
 #X obj 144 207 swap 500;
 #X obj 144 237 *;
 #X obj 147 172 hsl 128 15 0.7 0.3 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 3900 1;
+-262144 -1 -1 0 1;
 #X obj 76 254 del 250;
 #X obj 82 23 loadbang;
 #X connect 0 0 1 0;
