@@ -1,4 +1,4 @@
-#N canvas 366 68 707 670 10;
+#N canvas 692 75 707 670 10;
 #X obj 78 441 tapedeck~;
 #X msg 90 98 open \$1;
 #X obj 90 78 openpanel;
@@ -14,18 +14,18 @@
 1;
 #X msg 124 269 autoreverse \$1;
 #X obj 133 333 hsl 99 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4900 1;
 #X msg 130 351 flutter speed \$1;
 #X msg 238 351 flutter depth \$1;
 #X obj 241 333 hsl 99 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 8700 1;
 #X msg 237 400 noise \$1;
 #X obj 240 381 hsl 99 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6300 1;
 #X msg 387 365 metal;
 #X obj 144 526 line~;
 #X obj 147 474 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6200 1;
+-1 -1 4700 1;
 #X msg 144 498 \$1 20;
 #X text 248 39 to implement later: pause rewind \, fast forward \,
 side B and autoreverse (maybe even later: speed dubbing :);
